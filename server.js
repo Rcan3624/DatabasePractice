@@ -24,14 +24,14 @@ const courseSchema = ({
 
 });
 
-const Movie = mongoose.model('Course', courseSchema);
+const Course = mongoose.model('Course', courseSchema);
 
 // https://youtu.be/yH593K9fYvE?t=346
 // https://youtu.be/yH593K9fYvE?t=722
 app.get('/', (req, res) => {
-    Movie.find({}, async(err, movies) => {
+    Course.find({}, async(err, classes) => {
         res.render('index', {
-            moviesList: movies
+            moviesList: classes
         })
     })
 })
