@@ -31,7 +31,7 @@ const Course = mongoose.model('Course', courseSchema);
 app.get('/', (req, res) => {
     Course.find({}, async(err, classes) => {
         res.render('index', {
-            moviesList: classes
+            courseList: classes
         })
     })
 })
